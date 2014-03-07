@@ -1,0 +1,962 @@
+[
+  {
+    "id": "demo/mmodule/0.0.1/a",
+    "dependencies": [],
+    "factory": {
+      "type": "FunctionExpression",
+      "id": null,
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "require"
+        },
+        {
+          "type": "Identifier",
+          "name": "exports"
+        },
+        {
+          "type": "Identifier",
+          "name": "module"
+        }
+      ],
+      "defaults": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                  "type": "Identifier",
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "log"
+                }
+              },
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "computed": false,
+                  "object": {
+                    "type": "Identifier",
+                    "name": "module"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "uri"
+                  }
+                },
+                {
+                  "type": "Literal",
+                  "value": "loaded"
+                }
+              ]
+            }
+          },
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+                "type": "Identifier",
+                "name": "module"
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "uri"
+              }
+            }
+          }
+        ]
+      },
+      "rest": null,
+      "generator": false,
+      "expression": false
+    },
+    "node": {
+      "type": "CallExpression",
+      "callee": {
+        "type": "Identifier",
+        "name": "define"
+      },
+      "arguments": [
+        {
+          "type": "Literal",
+          "value": "demo/mmodule/0.0.1/a"
+        },
+        {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [
+            {
+              "type": "Identifier",
+              "name": "require"
+            },
+            {
+              "type": "Identifier",
+              "name": "exports"
+            },
+            {
+              "type": "Identifier",
+              "name": "module"
+            }
+          ],
+          "defaults": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "Identifier",
+                      "name": "console"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "log"
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "module"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "uri"
+                      }
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "loaded"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "ReturnStatement",
+                "argument": {
+                  "type": "MemberExpression",
+                  "computed": false,
+                  "object": {
+                    "type": "Identifier",
+                    "name": "module"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "uri"
+                  }
+                }
+              }
+            ]
+          },
+          "rest": null,
+          "generator": false,
+          "expression": false
+        }
+      ]
+    },
+    "idNode": {
+      "type": "Literal",
+      "value": "demo/mmodule/0.0.1/a"
+    },
+    "dependencyNode": null,
+    "requireNodes": [],
+    "asyncNodes": []
+  },
+  {
+    "id": "demo/mmodule/0.0.1/b",
+    "dependencies": [],
+    "factory": {
+      "type": "FunctionExpression",
+      "id": null,
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "require"
+        },
+        {
+          "type": "Identifier",
+          "name": "exports"
+        },
+        {
+          "type": "Identifier",
+          "name": "module"
+        }
+      ],
+      "defaults": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                  "type": "Identifier",
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "log"
+                }
+              },
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "computed": false,
+                  "object": {
+                    "type": "Identifier",
+                    "name": "module"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "uri"
+                  }
+                },
+                {
+                  "type": "Literal",
+                  "value": "loaded"
+                }
+              ]
+            }
+          },
+          {
+            "type": "ReturnStatement",
+            "argument": {
+              "type": "MemberExpression",
+              "computed": false,
+              "object": {
+                "type": "Identifier",
+                "name": "module"
+              },
+              "property": {
+                "type": "Identifier",
+                "name": "uri"
+              }
+            }
+          }
+        ]
+      },
+      "rest": null,
+      "generator": false,
+      "expression": false
+    },
+    "node": {
+      "type": "CallExpression",
+      "callee": {
+        "type": "Identifier",
+        "name": "define"
+      },
+      "arguments": [
+        {
+          "type": "Literal",
+          "value": "demo/mmodule/0.0.1/b"
+        },
+        {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [
+            {
+              "type": "Identifier",
+              "name": "require"
+            },
+            {
+              "type": "Identifier",
+              "name": "exports"
+            },
+            {
+              "type": "Identifier",
+              "name": "module"
+            }
+          ],
+          "defaults": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "Identifier",
+                      "name": "console"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "log"
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "module"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "uri"
+                      }
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "loaded"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "ReturnStatement",
+                "argument": {
+                  "type": "MemberExpression",
+                  "computed": false,
+                  "object": {
+                    "type": "Identifier",
+                    "name": "module"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "uri"
+                  }
+                }
+              }
+            ]
+          },
+          "rest": null,
+          "generator": false,
+          "expression": false
+        }
+      ]
+    },
+    "idNode": {
+      "type": "Literal",
+      "value": "demo/mmodule/0.0.1/b"
+    },
+    "dependencyNode": null,
+    "requireNodes": [],
+    "asyncNodes": []
+  },
+  {
+    "id": "gal/inject/0.0.1/inject",
+    "dependencies": [],
+    "factory": {
+      "type": "FunctionExpression",
+      "id": null,
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "require"
+        },
+        {
+          "type": "Identifier",
+          "name": "exports"
+        },
+        {
+          "type": "Identifier",
+          "name": "module"
+        }
+      ],
+      "defaults": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                  "type": "Identifier",
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "log"
+                }
+              },
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "computed": false,
+                  "object": {
+                    "type": "Identifier",
+                    "name": "module"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "uri"
+                  }
+                },
+                {
+                  "type": "Literal",
+                  "value": "loaded"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "rest": null,
+      "generator": false,
+      "expression": false
+    },
+    "node": {
+      "type": "CallExpression",
+      "callee": {
+        "type": "Identifier",
+        "name": "define"
+      },
+      "arguments": [
+        {
+          "type": "Literal",
+          "value": "gal/inject/0.0.1/inject"
+        },
+        {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [
+            {
+              "type": "Identifier",
+              "name": "require"
+            },
+            {
+              "type": "Identifier",
+              "name": "exports"
+            },
+            {
+              "type": "Identifier",
+              "name": "module"
+            }
+          ],
+          "defaults": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "Identifier",
+                      "name": "console"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "log"
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "module"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "uri"
+                      }
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "loaded"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "rest": null,
+          "generator": false,
+          "expression": false
+        }
+      ]
+    },
+    "idNode": {
+      "type": "Literal",
+      "value": "gal/inject/0.0.1/inject"
+    },
+    "dependencyNode": null,
+    "requireNodes": [],
+    "asyncNodes": []
+  },
+  {
+    "id": "x/y/0.0.1/z",
+    "dependencies": [],
+    "factory": {
+      "type": "FunctionExpression",
+      "id": null,
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "require"
+        },
+        {
+          "type": "Identifier",
+          "name": "exports"
+        },
+        {
+          "type": "Identifier",
+          "name": "module"
+        }
+      ],
+      "defaults": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                  "type": "Identifier",
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "log"
+                }
+              },
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "computed": false,
+                  "object": {
+                    "type": "Identifier",
+                    "name": "module"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "uri"
+                  }
+                },
+                {
+                  "type": "Literal",
+                  "value": "loaded"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "rest": null,
+      "generator": false,
+      "expression": false
+    },
+    "node": {
+      "type": "CallExpression",
+      "callee": {
+        "type": "Identifier",
+        "name": "define"
+      },
+      "arguments": [
+        {
+          "type": "Literal",
+          "value": "x/y/0.0.1/z"
+        },
+        {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [
+            {
+              "type": "Identifier",
+              "name": "require"
+            },
+            {
+              "type": "Identifier",
+              "name": "exports"
+            },
+            {
+              "type": "Identifier",
+              "name": "module"
+            }
+          ],
+          "defaults": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "Identifier",
+                      "name": "console"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "log"
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "module"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "uri"
+                      }
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "loaded"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "rest": null,
+          "generator": false,
+          "expression": false
+        }
+      ]
+    },
+    "idNode": {
+      "type": "Literal",
+      "value": "x/y/0.0.1/z"
+    },
+    "dependencyNode": null,
+    "requireNodes": [],
+    "asyncNodes": []
+  },
+  {
+    "id": "demo/mmodule/0.0.1/e",
+    "dependencies": [],
+    "factory": {
+      "type": "FunctionExpression",
+      "id": null,
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "require"
+        },
+        {
+          "type": "Identifier",
+          "name": "exports"
+        },
+        {
+          "type": "Identifier",
+          "name": "module"
+        }
+      ],
+      "defaults": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                  "type": "Identifier",
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "log"
+                }
+              },
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "computed": false,
+                  "object": {
+                    "type": "Identifier",
+                    "name": "module"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "uri"
+                  }
+                },
+                {
+                  "type": "Literal",
+                  "value": "loaded"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "rest": null,
+      "generator": false,
+      "expression": false
+    },
+    "node": {
+      "type": "CallExpression",
+      "callee": {
+        "type": "Identifier",
+        "name": "define"
+      },
+      "arguments": [
+        {
+          "type": "Literal",
+          "value": "demo/mmodule/0.0.1/e"
+        },
+        {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [
+            {
+              "type": "Identifier",
+              "name": "require"
+            },
+            {
+              "type": "Identifier",
+              "name": "exports"
+            },
+            {
+              "type": "Identifier",
+              "name": "module"
+            }
+          ],
+          "defaults": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "Identifier",
+                      "name": "console"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "log"
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "module"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "uri"
+                      }
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "loaded"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "rest": null,
+          "generator": false,
+          "expression": false
+        }
+      ]
+    },
+    "idNode": {
+      "type": "Literal",
+      "value": "demo/mmodule/0.0.1/e"
+    },
+    "dependencyNode": null,
+    "requireNodes": [],
+    "asyncNodes": []
+  },
+  {
+    "id": "demo/mmodule/0.0.1/f",
+    "dependencies": [],
+    "factory": {
+      "type": "FunctionExpression",
+      "id": null,
+      "params": [
+        {
+          "type": "Identifier",
+          "name": "require"
+        },
+        {
+          "type": "Identifier",
+          "name": "exports"
+        },
+        {
+          "type": "Identifier",
+          "name": "module"
+        }
+      ],
+      "defaults": [],
+      "body": {
+        "type": "BlockStatement",
+        "body": [
+          {
+            "type": "ExpressionStatement",
+            "expression": {
+              "type": "CallExpression",
+              "callee": {
+                "type": "MemberExpression",
+                "computed": false,
+                "object": {
+                  "type": "Identifier",
+                  "name": "console"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "name": "log"
+                }
+              },
+              "arguments": [
+                {
+                  "type": "MemberExpression",
+                  "computed": false,
+                  "object": {
+                    "type": "Identifier",
+                    "name": "module"
+                  },
+                  "property": {
+                    "type": "Identifier",
+                    "name": "uri"
+                  }
+                },
+                {
+                  "type": "Literal",
+                  "value": "loaded"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "rest": null,
+      "generator": false,
+      "expression": false
+    },
+    "node": {
+      "type": "CallExpression",
+      "callee": {
+        "type": "Identifier",
+        "name": "define"
+      },
+      "arguments": [
+        {
+          "type": "Literal",
+          "value": "demo/mmodule/0.0.1/f"
+        },
+        {
+          "type": "FunctionExpression",
+          "id": null,
+          "params": [
+            {
+              "type": "Identifier",
+              "name": "require"
+            },
+            {
+              "type": "Identifier",
+              "name": "exports"
+            },
+            {
+              "type": "Identifier",
+              "name": "module"
+            }
+          ],
+          "defaults": [],
+          "body": {
+            "type": "BlockStatement",
+            "body": [
+              {
+                "type": "ExpressionStatement",
+                "expression": {
+                  "type": "CallExpression",
+                  "callee": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
+                      "type": "Identifier",
+                      "name": "console"
+                    },
+                    "property": {
+                      "type": "Identifier",
+                      "name": "log"
+                    }
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "computed": false,
+                      "object": {
+                        "type": "Identifier",
+                        "name": "module"
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "name": "uri"
+                      }
+                    },
+                    {
+                      "type": "Literal",
+                      "value": "loaded"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "rest": null,
+          "generator": false,
+          "expression": false
+        }
+      ]
+    },
+    "idNode": {
+      "type": "Literal",
+      "value": "demo/mmodule/0.0.1/f"
+    },
+    "dependencyNode": null,
+    "requireNodes": [],
+    "asyncNodes": []
+  }
+]

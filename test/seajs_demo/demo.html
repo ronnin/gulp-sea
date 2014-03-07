@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SeaJs Demo</title>
+  <script src="sea-modules/seajs/seajs/2.1.1/sea.js"></script>
+  <!--<script src="sea-modules/demo/mmodule/0.0.1/mmodule.js"></script>-->
+  <script>
+    seajs.config({
+      //base: 'sea-modules',
+
+      alias: {
+        'mm': 'demo/mmodule/0.0.1/mmodule',
+        'consumer': 'demo/consumer/0.0.1/consumer',
+        'ma': 'demo/mmodule/0.0.1/a',
+        'mb': 'demo/mmodule/0.0.1/b'/*,
+       'c': 'demo/mmodule/0.0.1/mmodule/c',
+        'd': 'demo/mmodule/0.0.1/mmodule/d',
+        'e': 'demo/mmodule/0.0.1/mmodule/e',
+        'f': 'demo/mmodule/0.0.1/mmodule/f'*/
+      },
+      preload: ['mm']
+    });
+
+  </script>
+</head>
+<body>
+  <script>
+    /*seajs.use(['demo/mmodule/0.0.1/mmodule', 'demo/mmodule/0.0.1/a', 'demo/mmodule/0.0.1/b'], function(_, a, b){
+      console.log(a, ' -- ', b);
+    });*/
+    seajs.use(['consumer'], function(consumer) {
+      console.log(consumer);
+    });
+
+
+    seajs.use(['ma'], function(ma) {
+      console.log('Got:', ma);
+    });
+
+  </script>
+</body>
+</html>

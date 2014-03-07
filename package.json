@@ -1,0 +1,32 @@
+{
+  "name": "gulp-seajs",
+  "version": "0.0.1",
+  "description": "SeaJS transformer for Gulp",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ronnin/gulp-seajs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ronnin/gulp-seajs/issues"
+  },
+  "homepage": "https://github.com/ronnin/gulp-seajs",
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "seajs"
+  ],
+  "author": "Ronnin Lee <ronnin.lee@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "^2.2.14",
+    "through2": "^0.4.1",
+    "async": "^0.2.10",
+    "lodash.defaults": "^2.4.1"
+  },
+  "devDependencies": {
+    "should": "^3.1.3",
+    "mocha": "^1.17.1"
+  },
+  "_id": "gulp-seajs@0.0.1",
+  "_from": "gulp-seajs@"
+}
