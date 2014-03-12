@@ -202,13 +202,13 @@ describe('job on scripts', function () {
     };
 
     function logTransform(baseName, debug) {
-      return function(code, cb) {
+      return function(output, cb) {
         fs.writeFile(
           path.join(__dirname, 'seajs_demo/build', baseName + (debug ? '-debug.js' : '.js')),
-          code
+          output.code || output
         );
 
-        cb(null, code);
+        cb(null, output);
       }
     }
 
@@ -235,12 +235,12 @@ describe('job on scripts', function () {
         }
         //, logTransform(baseName, debug)
       ],
-      function(err, code) {
+      function(err, output) {
         should.not.exists(err);
         fs.readFile(expectedFile, function(err, expectedCode) {
           should.not.exists(err);
 
-          should(code.toString()).eql(expectedCode.toString());
+          should((output.code || output).toString()).eql(expectedCode.toString());
           done();
         });
       });
@@ -286,7 +286,7 @@ describe('job on scripts', function () {
       }, done);
     });
 
-    it('6 "define" at seajs_demo/sea-modules/demo/mmodule/0.0.1/mmodule.js', function(done){
+    it('6 "define"s at seajs_demo/sea-modules/demo/mmodule/0.0.1/mmodule.js', function(done){
       var testFile = path.join(__dirname, 'seajs_demo/sea-modules/demo/mmodule/0.0.1/mmodule.js');
       var expected = path.join(__dirname, 'seajs_demo/expected/mmodule.js');
       var expectedDebug = path.join(__dirname, 'seajs_demo/expected/mmodule-debug.js');
