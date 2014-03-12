@@ -13,7 +13,7 @@ define(function (require, module, exports) {
   };
 
   require.async(['xa', 'xb'], function(a, b){});
-  require.async('xc', function(d){});
+  require.async('xc', function(c){});
   require.async(['xd', 'xe']);
   require.async('xf');
 
