@@ -1,4 +1,5 @@
 var path = require('path');
+var fs = require('fs');
 
 var gulpUtil = require('gulp-util');
 var PluginError = gulpUtil.PluginError;
@@ -12,21 +13,38 @@ var script = require('./lib/script');
 /**
  *
  * @param options {{
- *  mode: 1: just normal code; 2: just minifies & obufuscated code; 0: both.
+ *  mode: if 1, just normal code; if 2, just minifies & obufuscated code; if 0, both. default 0
  *  idleading: used for id-non-specified module, generate id by idleading+file.basename,
  *  alias: module alias,
  *  dependencies: function or instant value for transforming dependencies.
  *                if function, an argument Array[String], aka, dependencies, will be passed in.
+ *                if not provided, transform by alias
  *  require: function or instant value for transforming require('').
  *                if function, an argument String, aka, alias of module required, will be passed in.
+ *                if not provided, transform by alias
  *  async: function or instant value for transforming require.async('')
  *                if function, an argument String, aka, alias of module required, will be passed in.
+ *                if not provided, transform by alias
+ *  pkgAliasEnabled: if true, mixin  spm.alias from ./package.json into options.alias. default true.
+ *
  * }}
  * @returns {*}
  */
 module.exports = function(options) {
   options = options || {};
   var idLeading = options.idleading ? ensureEndsWith(options.idleading.replace(/\\/g, '/'), '/') : '';
+
+  options.alias = options.alias || {};
+
+  if (options.pkgAliasEnabled !== false) {
+    var pkgFile = path.join(process.cwd(), './package.json');
+    if (fs.existsSync(pkgFile)) {
+      var pkg = require(pkgFile);
+      if (isObject(pkg) && isObject(pkg.spm) && isObject(pkg.spm.alias)) {
+        options.alias = defaults(options.alias, pkg.spm.alias);
+      }
+    }
+  }
 
   return through2.obj(function(file, enc, next){
     var self = this;
@@ -102,4 +120,8 @@ function ensureEndsWith(str, ends) {
     return str + ends;
   }
   return str;
+}
+
+function isObject(o) {
+  return o && typeof o == 'object';
 }

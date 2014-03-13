@@ -1,0 +1,31 @@
+{
+  "family": "demo",
+  "name": "seajs_demo",
+  "version": "0.0.1",
+  "spm": {
+    "output": [
+      "x.js",
+      "x-debug.js",
+      "ya.js",
+      "ya-debug.js",
+      "yb.js",
+      "yb-debug.js",
+      "z.js",
+      "z-debug.js",
+      "lib/sub.js",
+      "lib/sub-debug.js"
+    ],
+    "alias": {
+      "jquery": "jquery/jquery/1.9.1/jquery",
+      "lodash": "lodash/lodash/2.1.0/lodash",
+      "xa": "demo/demo/0.0.1/xa",
+      "xa-debug": "demo/demo/0.0.1/xa-debug",
+      "xb": "demo/demo/0.0.1/xb",
+      "xb-debug": "demo/demo/0.0.1/xb-debug",
+      "xc": "demo/demo/0.0.1/xc",
+      "xd": "demo/demo/0.0.1/xd",
+      "xe": "demo/demo/0.0.1/xe",
+      "xf": "demo/demo/0.0.1/xf"
+    }
+  }
+}
