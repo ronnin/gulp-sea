@@ -41,7 +41,7 @@ module.exports = function(options) {
       return next();
     }
 
-    var baseName = path.basename(file.path, '.js');
+    var baseName = file.relative.replace(/\.js$/, '');
     var opt = defaults({
       id: function(id){
         return id || (idLeading + baseName);
@@ -60,7 +60,7 @@ module.exports = function(options) {
         modes = [true, false]; // both
     }
 
-    async.eachSeries(modes, function(mode, callback){
+    async.each(modes, function(mode, callback){
       transformScript(file, defaults({debug: mode}, opt), function(err, f) {
         if (err) {
           callback(err);

@@ -1,0 +1,1 @@
+define('$$/lib/sub',['demo/demo/0.0.1/xa','lodash/lodash/2.1.0/lodash'],function(a,b){var c=a('demo/demo/0.0.1/xa');b.seek=function(c){var b=a('lodash/lodash/2.1.0/lodash');return b.some(['watermelon','muskmelon'],function(a){return a==c;});};});

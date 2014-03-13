@@ -37,8 +37,7 @@ describe('gulp-seajs transforms ', function(){
         should.exists(file.path);
         should.exists(file.contents);
 
-        var basename = path.basename(file.path);
-        var expectedFile = path.join(file.path, '../../expected', basename);
+        var expectedFile = path.join(file.base, '../expected', file.relative);
         should(fs.readFileSync(expectedFile).toString('utf8')).eql(file.contents.toString('utf8'));
       })
       .pipe(clean({force: true}))

@@ -146,6 +146,33 @@ describe('job on scripts', function () {
       });
     });
 
+    it('1 "define" from seajs_demo/src/lib/sub.js', function (done) {
+      var testFile = path.join(__dirname, 'seajs_demo/src/lib/sub.js');
+      testExtraction(testFile, function (err, data) {
+        should.not.exist(err);
+
+        assertDataValid(data);
+        //logExtraction(testFile, data);
+
+        should(data.defines).be.an.Array.and.have.length(1);
+        var def = data.defines[0];
+        assertDefineValid(def);
+        should.not.exists(def.id);
+        should.not.exists(def.idNode);
+
+        should(def.node).be.an.Object.and.not.be.empty;
+        should(def.node.arguments).be.an.Array.and.have.length(1);
+        should(def.factory).exactly(def.node.arguments[0]);
+
+        should(def.dependencies).be.an.Array.and.eql(['xa', 'lodash']);
+        should.not.exist(def.dependencyNode);
+        should(def.requireNodes).be.an.Array.and.have.length(2);
+        should(def.asyncNodes).be.an.Array.and.be.empty;
+
+        done();
+      });
+    });
+
     it('6 "define"s from seajs_demo/sea-modules/demo/mmodule/0.0.1/mmodule.js', function (done) {
       var expectedIds = [
         'demo/mmodule/0.0.1/a',
@@ -213,8 +240,9 @@ describe('job on scripts', function () {
     }
 
     var idLeading = '$$/';
+    var srcBase = path.join(__dirname, 'seajs_demo/src');
     function testTransform(srcFile, expectedFile, debug, done) {
-      var baseName = path.basename(srcFile, '.js');
+      var baseName = path.relative(srcBase, srcFile).replace(/\.js$/, '');
 
       async.waterfall([
         function(cb){
@@ -280,6 +308,16 @@ describe('job on scripts', function () {
       var testFile = path.join(__dirname, 'seajs_demo/src/z.js');
       var expected = path.join(__dirname, 'seajs_demo/expected/z.js');
       var expectedDebug = path.join(__dirname, 'seajs_demo/expected/z-debug.js');
+
+      async.each([false, true], function(debug, cb){
+        testTransform(testFile, debug ? expectedDebug : expected , debug, cb);
+      }, done);
+    });
+
+    it('1 "define" at seajs_demo/src/lib/sub.js', function(done){
+      var testFile = path.join(__dirname, 'seajs_demo/src/lib/sub.js');
+      var expected = path.join(__dirname, 'seajs_demo/expected/lib/sub.js');
+      var expectedDebug = path.join(__dirname, 'seajs_demo/expected/lib/sub-debug.js');
 
       async.each([false, true], function(debug, cb){
         testTransform(testFile, debug ? expectedDebug : expected , debug, cb);
