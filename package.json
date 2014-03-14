@@ -15,6 +15,9 @@
     "gulp",
     "seajs"
   ],
+  "scripts": {
+    "test": "node_modules/.bin/mocha -R spec"
+  },
   "author": "Ronnin Lee <ronnin.lee@gmail.com>",
   "license": "MIT",
   "dependencies": {
