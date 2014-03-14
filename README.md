@@ -74,7 +74,7 @@ gulp.task('seajs', function () {
 
     if not provided, transformed by alias
 
- + async
++ async
 
     function or instant value for transforming **require.async()**
 
