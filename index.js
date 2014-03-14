@@ -14,19 +14,20 @@ var script = require('./lib/script');
 /**
  *
  * @param options {{
- *  mode: if 1, just normal code; if 2, just minifies & obufuscated code; if 0, both. default 0
- *  idleading: used for id-non-specified module, generate id by idleading+file.basename,
+ *  mode: if 1, just code in debug style; if 2, just code in minified & obufuscated style; if 0, both. default 0
+ *  idleading: used for id-non-specified module, generate id by idleading+file.relative(no file extname),
  *  alias: module alias,
+ *  id: function or instant value for transforming module id.
  *  dependencies: function or instant value for transforming dependencies.
- *                if function, an argument Array[String], aka, dependencies, will be passed in.
- *                if not provided, transform by alias
+ *                if function, will called with an argument Array(String), aka, alias.
+ *                if not provided, transformed by alias
  *  require: function or instant value for transforming require('').
- *                if function, an argument String, aka, alias of module required, will be passed in.
- *                if not provided, transform by alias
+ *                if function, will called with an argument String, aka, an alias of module required.
+ *                if not provided, transformed by alias
  *  async: function or instant value for transforming require.async('')
- *                if function, an argument String, aka, alias of module required, will be passed in.
- *                if not provided, transform by alias
- *  pkgAliasEnabled: if true, mixin  spm.alias from ./package.json into options.alias. default true.
+ *                if function, will called with an argument String, aka, an alias of module required.
+ *                if not provided, transformed by alias
+ *  pkgAliasEnabled: if true, merge spm.alias from ./package.json into options.alias. default true.
  *
  * }}
  * @returns {*}

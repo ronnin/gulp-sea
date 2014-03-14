@@ -3,7 +3,9 @@ gulp-seajs
 
 A [SeaJs](https://seajs.org) plugin for Gulp
 
-[![Build Status](https://travis-ci.org/plus3network/gulp-less.png?branch=master)](https://travis-ci.org/plus3network/gulp-less)
+>   It's experimental project, which only supports javascripts temporarily.
+
+[![Build Status](https://travis-ci.org/ronnin/gulp-seajs.png?branch=master)](https://travis-ci.org/ronnin/gulp-seajs)
 
 ## Install
 
@@ -14,20 +16,71 @@ npm install gulp-seajs
 ## Usage
 ```javascript
 var seajs = require('gulp-seajs');
-var path = require('path');
 
 gulp.task('seajs', function () {
-  gulp.src('./less/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(gulp.dest('./public/css'));
+  gulp.src('src/**/*.js')
+      .pipe(seajs({
+        mode: 2,
+        alias: {
+          '$': 'jquery/jquery/1.9.1/jquery',
+          '_': 'lodash/lodash/2.1.0/lodash'
+        }
+        idleading: 'http://www.mysite.com'
+      }))
+      .pipe(gulp.dest('dist'));
+
 });
 ```
 
 ## Options
 
-The options are the same as what's supported by the less parser. Please note that this plugin only generates inline sourcemaps (with `sourceMap: true`) - specifying a `sourceMapFilename` option will do nothing.
++ mode
+
+    if 1, just code in debug style;
+
+    if 2, just code in minified & obufuscated style;
+
+    if 0, both. which is default.
+
++ alias
+
+    module alias.
+
++ pkgAliasEnabled
+
+    if true, merge **spm.alias** from ./package.json into options.alias. default true.
+
++ idleading
+
+    used for id-non-specified module, generate id by idleading+file.relative(no file extname)
+
++ id
+
+    function or instant value for transforming module id.
+
++ dependencies:
+
+    function or instant value for transforming dependencies.
+
+    if function, will called with an argument Array(String), aka, alias.
+
+    if not provided, transformed by alias
+
++ require
+
+    function or instant value for transforming **require('')**.
+
+    if function, will called with an argument String, aka, an alias of module required.
+
+    if not provided, transformed by alias
+
+ + async
+
+    function or instant value for transforming **require.async()**
+
+    if function, will called with an argument String, aka, an alias of module required.
+
+    if not provided, transformed by alias
 
 ## Error handling
 
