@@ -5,7 +5,8 @@ var gulpUtil = require('gulp-util');
 var PluginError = gulpUtil.PluginError;
 var through2 = require('through2');
 var async = require('async');
-var defaults = require('lodash.defaults');
+var _defaults = require('lodash.defaults');
+var _assign = require('lodash.assign');
 
 var script = require('./lib/script');
 
@@ -41,7 +42,7 @@ module.exports = function(options) {
     if (fs.existsSync(pkgFile)) {
       var pkg = require(pkgFile);
       if (isObject(pkg) && isObject(pkg.spm) && isObject(pkg.spm.alias)) {
-        options.alias = defaults(options.alias, pkg.spm.alias);
+        options.alias = _assign(options.alias, pkg.spm.alias);
       }
     }
   }
@@ -60,7 +61,7 @@ module.exports = function(options) {
     }
 
     var baseName = file.relative.replace(/\.js$/, '');
-    var opt = defaults({
+    var opt = _assign({
       id: function(id){
         return id || (idLeading + baseName);
       }
@@ -79,7 +80,7 @@ module.exports = function(options) {
     }
 
     async.each(modes, function(mode, callback){
-      transformScript(file, defaults({debug: mode}, opt), function(err, f) {
+      transformScript(file, _defaults({debug: mode}, opt), function(err, f) {
         if (err) {
           callback(err);
         } else {

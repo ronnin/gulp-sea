@@ -21,13 +21,14 @@
     "gulp-util": "^2.2.14",
     "through2": "^0.4.1",
     "async": "^0.2.10",
-    "lodash.defaults": "^2.4.1",
     "estraverse": "^1.5.0",
     "escodegen": "^1.2.0",
     "esprima": "^1.0.4",
     "esmangle": "^1.0.0",
     "gulp-rename": "^1.2.0",
-    "gulp-clean": "^0.2.4"
+    "gulp-clean": "^0.2.4",
+    "lodash.defaults": "^2.4.1",
+    "lodash.assign": "^2.4.1"
   },
   "devDependencies": {
     "should": "^3.1.3",
