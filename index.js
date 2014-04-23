@@ -7,6 +7,7 @@ var through2 = require('through2');
 var async = require('async');
 var _defaults = require('lodash.defaults');
 var _assign = require('lodash.assign');
+var isObject = require('utils').isObject;
 
 var script = require('./lib/script');
 
@@ -28,6 +29,7 @@ var script = require('./lib/script');
  *                if function, will called with an argument String, aka, an alias of module required.
  *                if not provided, transformed by alias
  *  pkgAliasEnabled: if true, merge spm.alias from ./package.json into options.alias. default true.
+ *  pkgDevAliasEnabled: if true, merge spm.devAlias from ./package.json into options.alias. default false.
  *
  * }}
  * @returns {*}
@@ -38,12 +40,17 @@ module.exports = function(options) {
 
   options.alias = options.alias || {};
 
-  if (options.pkgAliasEnabled !== false) {
+  if (options.pkgAliasEnabled !== false || options.pkgDevAliasEnabled) {
     var pkgFile = path.join(process.cwd(), './package.json');
     if (fs.existsSync(pkgFile)) {
       var pkg = require(pkgFile);
-      if (isObject(pkg) && isObject(pkg.spm) && isObject(pkg.spm.alias)) {
-        options.alias = _assign(options.alias, pkg.spm.alias);
+      if (isObject(pkg) && isObject(pkg.spm)) {
+        if (options.pkgAliasEnabled !== false && isObject(pkg.spm.alias)){
+          options.alias = _assign(options.alias, pkg.spm.alias);
+        }
+        if (options.pkgDevAliasEnabled && isObject(pkg.spm.devAlias)){
+          options.alias = _assign(options.alias, pkg.spm.devAlias);
+        }
       }
     }
   }
@@ -122,8 +129,4 @@ function ensureEndsWith(str, ends) {
     return str + ends;
   }
   return str;
-}
-
-function isObject(o) {
-  return o && typeof o == 'object';
 }

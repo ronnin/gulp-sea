@@ -50,6 +50,10 @@ gulp.task('seajs', function () {
 
     if true, merge **spm.alias** from ./package.json into options.alias. default true.
 
++ pkgDevAliasEnabled
+
+    if true, merge **spm.devAlias** from ./package.json into options.alias. default false.
+
 + idleading
 
     used for id-non-specified module, generate id by idleading+file.relative(no file extname)
